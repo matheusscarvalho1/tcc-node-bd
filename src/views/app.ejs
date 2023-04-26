@@ -18,7 +18,7 @@
                     </div>
                     <div class="input-wrapper">
                         <label>RGA</label>
-                        <input type="text" name="rga" id="rgaApp" placeholder="Digite o seu RGA">
+                        <input type="number" name="rga" id="rgaApp" placeholder="Digite o seu RGA">
                         <span class="erro"></span>
                     </div>
                     <div class="input-wrapper">
@@ -61,13 +61,13 @@
 
                     <div class="input-wrapper">
                         <label>Horas registradas no documento</label>
-                        <input name="hrasD" type="text" id="hrsDApp" placeholder="Digite as hrs registradas">
+                        <input name="hrasD" type="number" id="hrsDApp" placeholder="Digite as hrs registradas">
                         <span class="erro"></span>
                     </div>
                 </div>
                     <div class="input-wrapper">
                         <label>Mensagem (opcional)</label>
-                        <textarea id="msgApp"></textarea>
+                        <textarea name="msg" id="msgApp"></textarea>
                     </div>   
                 </div>
             </form>
@@ -112,9 +112,7 @@
                   </table>
               </div>
 
-              <div class="dashboards">
-                  <p>Dashbord com gráficos (c/ legendas) mostrando horas complementares e de extensão que tem registrado, quantas horas tem pendente para validar, quantas faltam para completar e o total de horas necessário</p>
-                  
+              <div class="dashboards">                 
                   <div class="chartCard">
                       <div class="chartBox">
                           <canvas id="myChart1"></canvas>

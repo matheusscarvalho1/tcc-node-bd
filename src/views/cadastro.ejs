@@ -5,7 +5,7 @@
 </head>
 <body class="bodyC">
 
-    <form class="form" id="formCadastro" action="">
+    <form class="form" id="formCadastro" action="/cadastro/add" method="POST">
         <div class="card">
             <div class="card-top">
                 <img class="imglogin" src="img/login-icon.jpg" alt="">
@@ -15,14 +15,14 @@
             </div>
 
             <div class="card-group">
-                <label for ="nameCad" class="bold">Nome</label>
-                <input type="text" name="nome" id="nameCad" placeholder="Digite o seu primeiro nome">
+                <label for ="nameCad" class="bold">Nome Completo</label>
+                <input type="text" name="name" id="nameCad" placeholder="Digite o seu primeiro nome">
                 <small class="erro"></small>
             </div>
 
             <div class="card-group">
-                <label for="sNameCad" class="bold">Sobrenome</label>
-                <input type="text" name="sNome" id="sNameCad" placeholder="Digite seu sobrenome">
+                <label for="sNameCad" class="bold">RGA</label>
+                <input type="text" name="rga" id="sNameCad" placeholder="Digite seu sobrenome">
                 <small class="erro"></small>
             </div>
 
@@ -35,7 +35,7 @@
         
             <div class="card-group">
                 <label for="passwordCad" class="bold">Senha</label>
-                <input type="password" id="passwordCad" name="senha" placeholder="Digite sua senha">
+                <input type="password" id="password" name="password" placeholder="Digite sua senha">
                 <small class="erro"></small>
             </div>
         
@@ -50,15 +50,14 @@
             <div class="card-group">
                 <label><input type="checkbox" onclick="mostrarSenha();">Mostrar senha</label>
             </div>
+            <div class="card-group">
+                <button type="submit" id="sendCad">Cadastrar</button>
+            </div>  
         </div>
     </form>
-
-
-<div class="btns">
-    <a href="index"><button id="btnLogin">Voltar para login</button></a>
-    <a href="index"><input type="submit" id="sendCad" value="Cadastrar"></a>  
- </div>
-
+    <div class="center-btn">
+        <a href="/"><button id="btnLogin">Voltar</button></a>
+    </div>
 
 <footer>
     <div class="footer-container ">

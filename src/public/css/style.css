@@ -207,6 +207,7 @@
 
 .bodyC .card-group {
     margin-bottom: 10px;
+    
 }
 
 .bodyC .imglogin {
@@ -241,23 +242,33 @@
     padding: 5px;
 }
 
-.bodyC #sendCad,
-.bodyC #btnLogin {
+.bodyC button {
     background-color: var(--color-secondary);
-    padding: 15px 40px;
+    padding: 15px;
     color: var(--color-tertiary);
     border: none;
     text-transform: uppercase;
     font-weight: bold;
-    cursor: pointer;
-    width: 20%; 
+    cursor: pointer; 
     box-shadow: 1px 1px 5px #ccc;
     border-radius: 30px;
+    text-align: center;
+    height: 25%;
+
+}
+.bodyC #sendCad {
+    width: 100%;
+    background-color: var(--color-primary);
 }
 
 
-.bodyC #sendCad {
-    margin-bottom: 15px;
+
+.bodyC .center-btn {
+   
+}
+
+.bodyC #btnLogin {
+    
 }
 
 .bodyC .btns {
@@ -1093,8 +1104,10 @@ li {
 .container {
  padding: 20px;
 }
-
-h2 {
+.bodyA {
+    background: var(--color-primary);
+}
+.bodyA h2 {
  text-transform: uppercase;
 }
 
@@ -1192,11 +1205,13 @@ margin-right: 0;
  color: var(--color-secondary);
 }
 
-
+.storage {
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+}
 
 .storage, .dashboard {
-
- border: 4px solid var(--color-secondary);
+border: solid 3px rgba(54, 162, 235, 1);
  padding: 20px;
  margin:  30px 30px;
  
@@ -1280,7 +1295,7 @@ margin-right: 0;
   
   .chartCard {
     
-    height: calc(100vh - 40px);
+    height: calc(100vh - 500px);
     background-color: var(--color-primary);
     align-items: center;
     display: flex;
