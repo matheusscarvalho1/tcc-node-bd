@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <%-include('partials/head.ejs')%>
+</head>
+<body class="bodyH">
+    <%-include('partials/header.ejs')%>
+
+<section class="homepage">
+<!-- IMAGENS Para o SLIDER -->
+    <div class="slider-principal">
+        <img src="img/curso-eng-comp.png"> <!--Engenharia de Computação -->
+        <img src="img/curso-eng-comp.png"> <!--Engenharia de Controle e automação -->
+        <img src="img/curso-eng-comp.png"> <!--Engenharia de Minas -->
+        <img src="img/curso-eng-comp.png"> <!--Engenharia de Transportes -->
+        <img src="img/curso-eng-comp.png">  <!--Engenharia Química -->
+    </div> 
+</section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="timing">
+                <div class="overlay">
+                <img src="img/clock-ic.png" width="35px" alt="Horários" class="icon-clock">
+                <br><br>
+                <h3>Horários</h3>
+                    <div class="text">
+                        <h4> Segunda à Sexta </h4>
+                        <span>07:30 - 11:30</span>
+                        <span>13:30 - 17:30</span>
+                    </div>
+                    <div class="text">
+                        <h4> Sabado e Domingo </h4>
+                        <span>Fechado</span>
+                    </div>
+                    <div class="text">
+                        <h4> Equipe de atendimento </h4>
+                        <span>Thiago Henrique de Souza Oliveira <br>(Secretário da Faculdade de Engenharia)</span>
+                    </div>
+                    <br>
+                    <img src="/img/loc-ic.png" width="35px" alt="Localização">
+                    
+                    <span>Av. Edgar Vieira, 1183-1221<br>Boa Esperança, Cuiabá</span>
+                    <br>
+                    <img src="/img/phone-ic.png" width="70px"  alt="Telefone">
+                    <span>(65) 3615-6269</span>
+                </div>
+            </div>
+            <div class="experience" id="app">
+                <span>FAENG</span>
+                <h2>Centro Universitário de Várzea Grande</h2>
+            
+                    <div class="text">
+                            <div class ="box1">
+                            <p>
+                                A Faculdade de Engenharia (FAENG) é a unidade acadêmica do Campus Universitário de Várzea Grande (CUVG), ambos criados em 2012.
+                                <p>Atualmente, a FAENG possui cinco cursos de graduação em Engenharia: <b>Engenharia de Computação;</b> <b>Engenharia de Controle e Automação;</b> <b>Engenharia de Transportes;</b> <b>Engenharia de Minas</b> e <b>Engenharia Química</b>, que oferecem juntos 315 vagas anuais por meio do Sistema de Seleção Unificada (SISU). 
+                                A FAENG está localizada no Campus Cuiabá, em espaço provisório cedido ao Campus de Várzea Grande.</p>
+                            </p>
+
+                            <p>
+                            Gerencie aqui suas horas
+                            </p>
+                                <a href="app"><button class="btn" id="btnApp">Clique aqui</button></a>
+                            </div>
+                            <div class ="instructions">
+                                Ainda possui dúvidas de como funciona o aproveitamento de horas de extensão e complementares ?
+                                
+                                <a href="duvidas"><button class="btn-instructions" id="btnDoubts">Clique aqui e sane suas dúvidas</button></a>
+                                
+                            </div>
+                        </div>
+            </div>
+</section>
+
+<!--MAPA-->
+
+<section id="location" class="location">
+<div class="container-map">
+    <div class="head">
+        <div class="info">
+            <div class="icon">
+                 <img src="img/loc-ic.png" width="25px" alt= "Localização">
+            </div>
+            <div class="text">
+                <span>Localização</span>
+                <span>Av. Edgar Vieira, 1183-1221</span>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="icon">
+                <img src="img/phone-ic.png" width="35px" alt= "Localização">
+            </div>
+    
+            <div class="text">
+                <span>Telefone</span>
+                <span>(65) 3615-6269</span>
+            </div>
+        </div>
+    
+                <div class="info">
+                        <div class="icon">
+                            <img src="img/email-ic.png" width="30px" alt= "Localização">
+                        </div>
+                        <div class="text">
+                            <span>E-mail</span>
+                            <span>faeng.cuvg@ufmt.br</span>
+                        </div>
+                </div>
+
+                <div class="info">
+                            <div class="icon">
+                                <img src="img/clock-ic.png" width="35px" alt= "Localização">
+                            </div>
+                            <div class="text">
+                                <span>Horário</span>
+                                <span>Seg. à Sex. <br>
+                                7:30 - 11:30 / 13:30 - 17:30</span>
+                            </div>
+                </div>
+        </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d960.6662093660809!2d-56.0618465138289!3d-15.60954609999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db02ed4c6f969%3A0x5cef911e3570f45e!2sFAENG!5e0!3m2!1spt-BR!2sbr!4v1678141246777!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+</section>
+<footer class="footer">
+    © 2023 UFMT - Todos os direitos reservados
+    <br>
+    Desenvolvido por Matheus Carvalho
+</footer>
+    <%-include('partials/footHp')%>
+</body>
+</html>
