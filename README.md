@@ -9,3 +9,6 @@ App developed with JS and Node.JS
 
 
 npm install nodemon
+
+
+npm run dev to run on localhost:8080
