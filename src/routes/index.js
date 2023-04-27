@@ -7,23 +7,23 @@ const IndexController = require('../controllers/index')
 router.get('/', IndexController.index)
 
 
-
+//Registro
 router.get('/cadastro', CustomersController.index)
-
-// CONTROLLER
 router.post('/cadastro/add', CustomersController.add) 
     
+//Registro dos dados
+router.get('/app', (req, res) => {
+   res.render('app', {
+   title:'Conversor'
+   })
+})
+
+router.post('/app/add', CustomersController.addData)
 
 
 router.get('/homepage', (req, res) => {
    res.render('homepage', {
        title:'Homepage'
-   })
-})
-
-router.get('/app', (req, res) => {
-   res.render('app', {
-   title:'Conversor'
    })
 })
 

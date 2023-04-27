@@ -9,7 +9,7 @@
         <div class="container">
             <h2>Preencha os campos abaixo</h2>
 
-            <form id="formCadastro">
+            <form id="formCadastro" action="/app/add" method="POST">
                 <div class="personal-data">
                     <div class="input-wrapper">
                         <label>Nome</label>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="input-wrapper">
                         <label>Telefone</label>
-                        <input name="tele" type="text" id="telApp" placeholder="Digite o seu telefone">
+                        <input name="telefone" type="number" id="telApp" placeholder="Digite o seu telefone">
                         <span class="erro"></span>
                     </div>
                     <div class="input-wrapper">
@@ -70,16 +70,17 @@
                         <textarea name="msg" id="msgApp"></textarea>
                     </div>   
                 </div>
-            </form>
+            
 
           <div class="btn-box">
               <div class="btns">
                   <a href="homepage"><button id="btnHp" class="btn">Voltar</button></a>
               </div>
               <div class="btns">
-                  <input class ="btn" type="submit" id="sendApp"  value="Enviar">
+                  <button class ="btn" type="submit" id="sendApp"> Enviar</button>
               </div>
           </div>
+        </form>
       </section>
       <section class="containerDb">
               <div class="storage"> 

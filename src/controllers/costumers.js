@@ -1,4 +1,5 @@
-const CostumersModel = require('../models/costumers')
+const CostumersModelCad = require('../models/costumersCad')
+const CostumersModelData = require('../models/costumersData')
 const { crypto } = require('../utils/passwords')
 
 function index (req, res) {
@@ -17,7 +18,7 @@ async function add (req, res) {
 
     const passwordCrypto = await crypto (password)
     
-    const register = new CostumersModel({
+    const register = new CostumersModelCad({
         name,
         rga,
         email,
@@ -31,11 +32,11 @@ async function add (req, res) {
 
 async function addData (req, res) {
     const {
-        name,
+        nome,
         rga,
         email,
         curso,
-        tele,
+        telefone,
         tipo,
         arq,
         hrasD,
@@ -44,13 +45,13 @@ async function addData (req, res) {
     } = req.body
 
     
-    const register = new CostumersModel({
+    const register = new CostumersModelData({
     
-        name,
+        nome,
         rga,
         email,
         curso,
-        tele,
+        telefone,
         tipo,
         arq,
         hrasD,
@@ -67,4 +68,5 @@ async function addData (req, res) {
 module.exports = {
     add,
     index,
+    addData,
     }
