@@ -67,7 +67,7 @@
                 </div>
                     <div class="input-wrapper">
                         <label>Mensagem (opcional)</label>
-                        <textarea name="msg" id="msgApp"></textarea>
+                        <input name="msg" id="msgApp" maxlength="100" placeholder="Digite uma observação para o avaliador" >
                     </div>   
                 </div>
             
@@ -77,188 +77,18 @@
                   <a href="homepage"><button id="btnHp" class="btn">Voltar</button></a>
               </div>
               <div class="btns">
-                  <button class ="btn" type="submit" id="sendApp"> Enviar</button>
+                  <button class ="btn" type="submit" id="sendApp">Enviar</button>
               </div>
           </div>
         </form>
       </section>
-      <section class="containerDb">
-              <div class="storage"> 
-                  <p>Tabela do que foi esta salvo no banco de dados o com a quantidade de horas totais de cada certificado registrado e a quantidade que foi aproveitada</p>
-                  <table>
-                      <tr>
-                          <th>Nome</th>
-                          <th>RGA</th>
-                          <th>E-mail</th>
-                          <th>Curso</th>
-                          <th>Telefone</th>
-                          <th>Tipo</th>
-                          <th>Certificado anexado</th>
-                          <th>Horas registradas no documento</th>
-                          <th>Horas registradas</th>
-                          <th>Mensagem</th>
-                      </tr>
-                      <tr>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                      </tr>
-                  </table>
-              </div>
-
-              <div class="dashboards">                 
-                  <div class="chartCard">
-                      <div class="chartBox">
-                          <canvas id="myChart1"></canvas>
-                          <b><small>Horas totais aproveitadas:</small></b>
-                          <br>
-                          <b><small>Horas faltam:</small></b>
-                      </div>
-                      <div class="chartBox">
-                          <canvas id="myChart2"></canvas>
-                          <b><small>Horas totais aproveitadas:</small></b>
-                          <br>
-                          <b><small>Horas faltam:</small></b>
-                      </div>
-                  </div>
-                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-                    <script>
-
-var ctx = document.getElementById('myChart1').getContext('2d');
-var myChart2 = document.getElementById('myChart2').getContext('2d');
-
-var myChart = new Chart (ctx, {
-      type: 'bar',
-      data: {
-      labels: ['Horas de extensão'],
-      datasets: [{
-      label:'Total de horas de extensão (336 Horas)',
-      data: [336],
-      borderWidth: 3,
-      borderColor: 'rgba(18, 94, 226, 1)',
-      backgroundColor: 'rgba(18, 94, 226, 1)',
-      type: 'line'
-    },
-    {
-      label: "Horas aproveitadas",
-      data: [168],
-      backgroundColor: [
-      "rgba(39, 204, 136, 0.3)"
-      ],
-      borderColor: [
-        "rgba(39, 204, 136, 1)"  
-      ],
-      borderWidth: 3,
-    },
-    {
-      label: "Horas faltantes",
-      data: [168],
-      backgroundColor: [
-        "backgroundColor: '#27cc88',"
-        
-      ],
-      backgroundColor: [
-      "rgba(255, 26, 104, 0.3)"
-      ],
-      borderColor: [
-        "rgba(255, 26, 104, 1)"
-        
-      ],
-      borderWidth: 3,
-    }
-  ]
-    },
-    options: {
-    responsive: true,
-    scales: {
-    x: {
-        stacked: true
-    },
-    y: {
-      beginAtZero: true,
-      stacked: true
-    },
-  },
-  }
-
-  });
-
-
-  var myChart = new Chart (myChart2, {
-    type: 'bar',
-    data: {
-    labels: ['Horas Complementares'],
-    datasets: [{
-    label:'Total de horas complementares (48 Horas)',
-    data: [48],
-    borderWidth: 3,
-    borderColor: 'rgba(18, 94, 226, 1)',
-    backgroundColor: 'rgba(18, 94, 226, 1)',
-    type: 'line'
-  },
-  {
-    label: "Horas aproveitadas",
-    data: [24],
-    backgroundColor: [
-    "rgba(39, 204, 136, 0.3)"
-    ],
-    borderColor: [
-      "rgba(39, 204, 136, 1)"  
-    ],
-    borderWidth: 3,
-  },
-  {
-    label: "Horas faltantes",
-    data: [24],
-    backgroundColor: [
-      "backgroundColor: '#27cc88',"
       
-    ],
-    backgroundColor: [
-    "rgba(255, 26, 104, 0.3)"
-    ],
-    borderColor: [
-      "rgba(255, 26, 104, 1)"
-      
-    ],
-    borderWidth: 3,
-  }
-]
-  },
-  options: {
-  responsive: true,
-  scales: {
-  x: {
-      stacked: true
-  },
-  y: {
-    beginAtZero: true,
-    stacked: true
-  },
-},
-}
-
-});
-                    </script>    
-              </div>
-
-      
-      
-  
 
       <footer class="footer">
           © 2023 UFMT - Todos os direitos reservados
           <br>
           Desenvolvido por Matheus Carvalho
       </footer>
-  </section>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/graph.js"></script>
   

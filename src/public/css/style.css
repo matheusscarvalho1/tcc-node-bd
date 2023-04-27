@@ -1167,14 +1167,21 @@ margin-right: 0;
 }
 
 .appointment .personal-data input,
-.appointment .personal-data select,
-.appointment  textarea {
+.appointment .personal-data select {
   padding: 10px;
   outline: none;
   border: none;
   width: 100%;
   border-radius: 3px;
 }
+
+#msgApp {
+    width: 500px;
+    height: 50px;
+    padding-left: 10px;
+}
+
+
 
 .appointment  textarea {
  width: 70%;
@@ -1249,6 +1256,11 @@ border: solid 3px rgba(54, 162, 235, 1);
  border: 2px solid #191919;
  border-collapse: collapse;
  
+}
+
+.storage th {
+    word-wrap: break-word;
+    max-width: 10px;
 }
 
  .containerDB {

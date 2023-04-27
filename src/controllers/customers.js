@@ -1,12 +1,21 @@
-const CostumersModelCad = require('../models/costumersCad')
-const CostumersModelData = require('../models/costumersData')
+const CustomersModelCad = require('../models/customersCad')
+const CustomersModelData = require('../models/customersData')
+
 const { crypto } = require('../utils/passwords')
+
+
 
 function index (req, res) {
     res.render('cadastro', {
        title:'Cadastro'
    })
 }
+
+function app (req, res) {
+    res.render('app', {
+    title:'Conversor'
+    })
+ }
 
 async function add (req, res) {
     const {
@@ -18,7 +27,7 @@ async function add (req, res) {
 
     const passwordCrypto = await crypto (password)
     
-    const register = new CostumersModelCad({
+    const register = new CustomersModelCad({
         name,
         rga,
         email,
@@ -45,7 +54,7 @@ async function addData (req, res) {
     } = req.body
 
     
-    const register = new CostumersModelData({
+    const register = new CustomersModelData({
     
         nome,
         rga,
@@ -63,10 +72,20 @@ async function addData (req, res) {
 
 }
 
+async function listData (req, res) {
+   const dataUsers = await CustomersModelData.find()
+
+    res.render('appList', {
+    title: 'Listagem e cadastro de dados',
+    dataUsers,
+    })
+}
 
 
 module.exports = {
     add,
-    index,
     addData,
+    index,
+    app,
+    listData,
     }

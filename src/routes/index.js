@@ -1,25 +1,25 @@
 const router = require('express').Router()
 
-const CustomersController = require('../controllers/costumers')
+const CustomersController = require('../controllers/customers')
 const IndexController = require('../controllers/index')
+const AppController = require('../controllers/app')
 
-// ROTAS
+//Rotas
 router.get('/', IndexController.index)
 
 
-//Registro
+//Cadastro
 router.get('/cadastro', CustomersController.index)
 router.post('/cadastro/add', CustomersController.add) 
     
-//Registro dos dados
-router.get('/app', (req, res) => {
-   res.render('app', {
-   title:'Conversor'
-   })
-})
 
+//Registro dos dados
+router.get('/app', AppController.app)
 router.post('/app/add', CustomersController.addData)
 
+
+//Listar dados
+router.get('/appList', CustomersController.listData)
 
 router.get('/homepage', (req, res) => {
    res.render('homepage', {
@@ -33,5 +33,10 @@ router.get('/duvidas', (req, res) => {
    })
 })
 
+router.get('/appList', (req, res) => {
+   res.render('appList', {
+       title:'Horas Cadastradas'
+   })
+})
 
 module.exports =  router
